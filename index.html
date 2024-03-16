@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="sajjad.gif" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="ri-time-fill" onclick="closemenu()"></i>
+
+                </ul>
+                <i class="ri-menu-line" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+               <h1>Hi, I'm<span>Sajjad</span><br> Khan From Pakistan</h1> 
+            </div>
+        </div>
+    </div>
+    <!----------------about------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">AboutMe</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis reprehenderit accusamus, quaerat perferendis earum optio ab libero!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experiance')">Experiance</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/ios apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experiance">
+                        <ul>
+                            <li><span>2021 - Current</span><br>UI/UX Design Training Dargai Institute</li>
+                            <li><span>2019 - 2021</span><br>Team Lead at StarApp LLC.</li>
+                            <li><span>2016 - 2017</span><br>Intership at ekart eComerce.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2016</span><br>UI/UX Design Training at Dargai Institute</li>
+                            <li><span>2016</span><br>MBA from Malakand</li>
+                            <li><span>2014</span><br>BBA from  Malakand</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------services--------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="service-list">
+                <div>
+                    <i class="ri-code-line"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae explicabo ullam sequi porro dignissimos?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="ri-crop-line"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores officiis animi ipsum dolor consequatur reiciendis.</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="ri-store-fill"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit molestiae explicabo ullam sequi porro dignissimos?</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------Portfolio------------------>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app connects you yo the talented people around the world.
+                            Download it from play store.</p>
+                            <a href="#"><i class="ri-external-link-line"></i></i></a>
+                        
+                    </div>
+
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>The app connects you yo the talented people around the world.
+                            Download it from play store.</p>
+                            <a href="#"><i class="ri-external-link-line"></i></i></a>
+                        
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app connects you yo the talented people around the world.
+                            Download it from play store.</p>
+                            <a href="#"><i class="ri-external-link-line"></i></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <!-------------------contact------------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="ri-send-plane-fill"></i>contact@example.com</p>
+                    <p><i class="ri-phone-fill"></i>0123456789</p>
+                    <div class="social-icon">
+                        <a href="https://www.facebook.com/photo/?fbid=208763102130145&set=a.112722345067555&__cft__[0]=AZXDUom9wLT6P_28uA2LeXPZiJ_82Ftau4N9kSO-XZieF7RaOgRpOesSLDtcvKt-eTqpQhbAtrEnWC2sxAPMI50mOQbUJdd8_OsSz3ABOBDfgeg37kDydNwGCTWR4Jqeo5nO5RjuOWIypREwk76qYkLZNAi9nq2V0wEv_dv7t4EiEA&__tn__=EH-R"><i class="ri-facebook-circle-fill"></i></a>
+                        <a href=""><i class="ri-twitter-fill"></i></a>
+                        <a href=""><i class="ri-instagram-fill"></i></a>
+                        <a href=""><i class="ri-linkedin-box-fill"></i></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Sajjad. Made with<i class="ri-heart-fill"></i>  by Sajjad Khan</p>
+        </div>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>
