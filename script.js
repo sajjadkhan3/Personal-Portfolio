@@ -1,45 +1,42 @@
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+const imgs = document.querySelectorAll('.header-slider ul img');
+const prev_btn = document.querySelector('.control-prev');
+const next_btn = document.querySelector('.control-next');
 
-function opentab(tabname){
-    for(tablink of tablinks){
-        tablink.classList.remove("active-link");
+let n = 0;
+
+function changeSlider(){
+    for (let i = 0; i < imgs.length; i++) {
+        imgs[i].style.display = 'none';
     }
+    imgs[n].style.display = 'block';
+}
+changeSlider();
 
-    for(tabcontent of tabcontents){
-        tabcontent.classList.remove("active-tab");
+prev_btn.addEventListener('click', (e)=>{
+    if(n > 0){
+        n--;
+    }else{
+        n = imgs.length - 1;
     }
-    event.currentTarget.classList.add("active-link");
-    document.getElementById(tabname).classList.add("active-tab");
+    changeSlider()
+})
 
-}
+next_btn.addEventListener('click', (e)=>{
+    if(n < imgs.length - 1){
+        n++;
+    }else{
+        n = 0;
+    }
+    changeSlider()
+})
 
-var sidemenu = document.getElementById("sidemenu");
+const scrollContainer = document.querySelectorAll('.products');
 
-function openmenu(){
-    sidemenu.style.right = "0";
-}
-function closemenu(){
-    sidemenu.style.right = "-200px";
-}
-
-
-
-
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwIdk1XbUb0XihsOvX958Ezbsx7UlImtqNcL-JGUfk24-BFAnAIQlSPsrh_ktr1zUh7/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg")
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = "Message sent successfully"
-        setTimeout(function(){
-            msg.innerHTML = ""
-        
-      },5000)
-      form.reset()
+for(const item of scrollContainer) {
+    item.addEventListener('wheel', (evt)=>{
+        evt.preventDefault();
+        item.scrollLeft += evt.deltaY;
     })
-      .catch(error => console.error('Error!', error.message))
-  })
+};
+
+
